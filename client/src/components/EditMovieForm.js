@@ -36,7 +36,7 @@ const EditMovieForm = (props) => {
 		axios.put(`http://localhost:5000/api/movies/${id}`, movie)
 		.then(res=> {
 		  setMovie(res.data);
-		  push('/api/movies');
+		  push(`/movies/${id}`);
 		})
 		.catch(err=> {
 		  console.log(err);
